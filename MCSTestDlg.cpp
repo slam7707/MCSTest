@@ -120,7 +120,7 @@ UINT CMCSTestDlg::MCSThread(LPVOID param)
 		else {
 			pDlg->OnClickedButton(IDC_CBUTTON_CONNECT);
 		}
-		Sleep(200);
+		Sleep(100);
 	}
 
 	return 0;
