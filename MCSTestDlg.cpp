@@ -75,8 +75,8 @@ UINT CMCSTestDlg::MCSThread(LPVOID param)
 	int					nResult = 0;						// mcst ¸®ÅÏ°ª
 	int					nReadCount = 0;						
 
-	// nAddress = 0, size = 5
-	// nAddress = 6, size = 3
+	// nAddress = 16, size = 3
+	// nAddress = 16, size = 2
 
 	while (pDlg->m_b_thd_flag) {
 		if (pMcs->CheckConnection() == MCS_ERROR_SUCCESS) {
@@ -98,7 +98,7 @@ UINT CMCSTestDlg::MCSThread(LPVOID param)
 			nResult = pMcs->GetLVariables(nAddress, pDlg->m_array_size, pDlg->m_array_data);
 			if (nResult == MCS_ERROR_SUCCESS) {
 				for (int i = 0; i < pDlg->m_array_size; i++) {
-					str.AppendFormat(_T("l var address %d = %d\r\n"), nAddress + i,  pDlg->m_array_data[i]);
+					str.AppendFormat(_T("%d) l var address %d = %d\r\n"), i + 1, nAddress + i,  pDlg->m_array_data[i]);
 				}
 			}
 			else {
