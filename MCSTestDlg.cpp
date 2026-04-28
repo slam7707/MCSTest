@@ -75,6 +75,7 @@ UINT CMCSTestDlg::MCSThread(LPVOID param)
 	int					nResult = 0;						// mcst ¸®ÅÏ°ª
 	int					nReadCount = 0;						
 
+	// nAddress = 16, size = 10
 	// nAddress = 16, size = 3
 	// nAddress = 16, size = 2
 
